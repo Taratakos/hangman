@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.flex-container {
+  border: 3px solid #33c951;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  max-width: 1000px;
+  height: 600px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.left-img {
+  max-width: 250px;
+}
+
+.left-title {
+  margin-top: 25px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-width: 500px;
+}
+
+.answer-field {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.answer-field div {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  transition: all .6s ease;
+}
+
+.question {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  height: 50px;
+}
+
+.keyboard-container {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.incorrect-field {
+  font-size: 25px;
+}
+
+.incorrect-field span {
+  color: #c93333;
+  font-weight: bold;
+}
+
+.key-button {
+  background: #f4cba9;
+  color: #c93333;
+  font-size: 25px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.loose-button {
+  border: 2px solid black;
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgb(129, 255, 127);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .6s ease;
+}
+
+.loose-button:hover {
+  background: rgb(102, 151, 135);
+  color: white;
+}
+
+.modal-container {
+  background: rgb(69, 158, 158);
+  position: absolute;
+  border-radius: 10px;
+  color: #3a220fab;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.loose-title {
+  font-size: 30px;
+}
+
+@media(max-width: 906px) {
+  .flex-container {
+    flex-direction: column;
+    height: initial;
+  }
+
+  .question {
+    text-align: center;
+    height: 65px;
+  }
+}
+
+@media(max-width: 380px) {
+  .flex-container {
+    padding: 0;
+  }
+}
